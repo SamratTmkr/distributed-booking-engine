@@ -2,7 +2,11 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from database import test_conn, engine
 
+# testing
+import model
+from database import Base
 
+print(Base.metadata.tables.keys())
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
